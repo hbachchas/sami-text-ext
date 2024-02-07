@@ -1,0 +1,20 @@
+==Script errors and their fixes==
+sorry for the very broken english here, but I don't know if I will need it:
+
+• Doble anførselstegn " lager trøbbel, alle feilmarkeringene blir borte i xml-filen. Feilen begrenser seg til nærmeste resulterende <p> paragraf. I originalteksten må det to etterfølgende linjeskift (en tom linje) til for å "stoppe" feilen. Har som en nødløsning brukt apostrof, men da har jeg måttet endre originalteksten fra " til '. Kanskje en manglende escaping av " kanskje?
+
+• Paranteser lager trøbbel: "Alt du trenger å gjøre er å trykke på (PWR) knappen". Hvis jeg vil markere: ((PWR) knappen)$[rettelse], så går det dårlig
+
+• Tegn før parentes lager trøbbel: "fart/trolling fart". Hvis jeg vil markere: "fart/(trolling fart)$[retting]", så går det dårlig.
+• Tegn etter parantes lager trøbbel: "silicon=luft". Hvis jeg vil barkere: "silicon$(rettelse)=luft", så går det dårlig.
+
+• Et linjeskift inni en feilmerking gjør at feilmerkingen forsvinner helt fra den resulterende xml-filen. [har bare sjekket nob-005, bør kanskje sjekke nob-001-004]
+Står det en "Dette er en (skriveleif med
+linjeskift)$(noun,typo|skrivefeil med linjeskift) inkludert." , blir resultatet i xml-filen:
+"Dette er en  inkludert."
+
+• For some reason, The scripts given:
+Jeg har fått et (bedre bilde av Asbjørnsen en av Moe)$(conj,doubc,conj,art|bedre bilde av Asbjørnsen enn av Moe) når jeg har drevet med særoppgava.
+produce
+Jeg har fått et bedre bilde av Asbjørnsen en av Moe når jeg har drevet med særoppgava.
+that is, simply remove the correction...
