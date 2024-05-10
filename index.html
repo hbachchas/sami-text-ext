@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sámi Language Modeling</title>
     <style>
-        /* Basic Reset */
         body, h1, p, a {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        /* Navigation Styles */
         header {
             background-color: #80a60d;
             color: #ffffff;
@@ -22,6 +20,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         header a {
             color: #ffffff;
@@ -33,16 +32,21 @@
             background-color: #aeba88;
         }
 
-        /* Main Content Styles */
         .content {
-            margin-top: 60px; /* Give space for the fixed header */
+            margin-top: 60px;
             padding: 20px;
             text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: #fff;
+            border-radius: 8px;
         }
         .content img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px; /* Rounded corners for the image */
+            border-radius: 8px;
         }
         h1 {
             color: #333;
@@ -50,11 +54,11 @@
         }
         p {
             color: #666;
-            line-height: 1.6;
+            line-height: 1.8;
             margin-top: 20px;
+            font-size: 16px;
         }
 
-        /* Footer Styles */
         footer {
             background-color: #f2f2f2;
             color: #333;
@@ -63,6 +67,7 @@
             position: relative;
             bottom: 0;
             width: 100%;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
         }
         footer a {
             color: #0056b3;
@@ -74,24 +79,24 @@
     </style>
 </head>
 <body>
+
+
     <header>
-        <a href="#about">About</a>
-        <a href="#resources">Resources</a>
-        <a href="#people">People</a>
+        <a href="#overview">Project Overview</a>
+        <a href="https://arxiv.org/abs/2405.05777" target="blank">Paper</a>
+        <a href="https://www.bioailab.org/" target="blank">Contact Us</a>
     </header>
+
 
     <div class="content">
         <img src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Project Overview">
         <h1>Welcome to Our Sámi Language Modeling Project</h1>
-        <p>This project focuses on research and development in the field of Acutely Low Resource (ALR) language modeling.</p>
+        <p>Sámi, an indigenous language group comprising multiple languages, faces digital marginalization due to the limited availability of data and sophisticated language models designed for its linguistic intricacies. This work focuses on increasing technological participation for the Sámi language. We draw the attention of the ML community towards the language modeling problem of Ultra Low Resource (ULR) languages. ULR languages are those for which the amount of available textual resources is very low, and the speaker count for them is also very low. ULRLs are also not supported by mainstream Large Language Models (LLMs) like ChatGPT, due to which gathering artificial training data for them becomes even more challenging. Mainstream AI foundational model development has given less attention to this category of languages. Generally, these languages have very few speakers, making it hard to find them. However, it is important to develop foundational models for these ULR languages to promote inclusion and the tangible abilities and impact of LLMs. To this end, we have compiled the available Sámi language resources from the web to create a clean dataset for training language models. In order to study the behavior of modern LLM models with ULR languages (Sámi), we have experimented with different kinds of LLMs, mainly at the order of ~ seven billion parameters. We have also explored the effect of multilingual LLM training for ULRLs. We found that the decoder-only models under a sequential multilingual training scenario perform better than joint multilingual training, whereas multilingual training with high semantic overlap, in general, performs better than training from scratch. This is the first study on the Sámi language for adapting non-statistical language models that use the latest developments in the field of natural language processing (NLP). We believe that the proposed dataset and findings from this study are going to accelerate future research for ULRLs.</p>
         <p>The data can be provided for research purposes upon request to <a href="mailto:dilip.prasad@uit.no">dilip.prasad@uit.no</a>.</p>
-        <!-- Explore our <a href="resources.html">resources</a> or get to know our <a href="people.html">team members</a>.</p> -->
     </div>
 
     <footer>
-        <!-- <p>Contact us: <a href="mailto:dilip.prasad@uit.no">dilip.prasad@uit.no</a></p> -->
         <p>&copy; 2024 UiT The Arctic University of Norway. All rights reserved.</p>
-        <p>Discover more about us on our <a href="about.html">About page</a>.</p>
     </footer>
 </body>
 </html>
